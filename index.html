@@ -2,136 +2,132 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Catalog-Z Clone</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Catalog-Z | Galería de Fotos</title>
 
-    <!-- Iconos -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">Catalog-Z</a>
+    <!-- Navegación Superior -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-film"></i> Catalog-Z
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tmNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="tmNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Fotos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Videos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contactos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="#">Photos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Videos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-            </ul>
-
-            <form class="d-flex ms-3 search-box">
-                <input class="form-control" type="search" placeholder="Search">
-                <button class="btn btn-dark ms-2"><i class="fas fa-search"></i></button>
+    <!-- Sección Hero con Buscador -->
+    <section class="hero-section">
+        
+        <div class="container d-flex justify-content-center">
+            
+            <form class="search-form"> 
+                <input type="text" class="search-input" placeholder="Search">
+                <button type="submit" class="search-button">
+                    🔍
+                    <i class="fas fa-search"></i>
+                </button>
             </form>
         </div>
-    </div>
-</nav>
+    </section>
 
-<!-- HERO / HEADER -->
-<section class="hero">
-    <div class="container text-center text-white">
-        <h1>Catalog-Z Gallery</h1>
-        <p>Beautiful Photos & Videos</p>
-    </div>
-</section>
-
-<!-- FILTROS -->
-<div class="container mt-5 pt-4">
-    <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
-        <div class="categories">
-            <button class="btn btn-dark active">All</button>
-            <button class="btn btn-outline-dark">Nature</button>
-            <button class="btn btn-outline-dark">City</button>
-            <button class="btn btn-outline-dark">Animals</button>
-            <button class="btn btn-outline-dark">Travel</button>
-        </div>
-
-        <div class="text-muted">Page 1 of 200</div>
-    </div>
-
-    <!-- GALERÍA -->
-    <div class="row g-4">
-
-        <!-- CARD -->
-        <div class="col-md-6 col-lg-3">
-            <div class="gallery-item">
-                <img src="https://picsum.photos/400/300?1">
-                <div class="overlay">
-                    <h5>Mountain</h5>
-                    <p>Nature</p>
-                </div>
+    <!-- Galería Principal -->
+    <main class="container py-5">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <h2 class="tm-text-primary">Ultimas fotos</h2>
+            <div class="pagination-info">
+                Page <input type="number" value="1" class="page-input"> of 10
+            
             </div>
         </div>
 
-        <div class="col-md-6 col-lg-3">
-            <div class="gallery-item">
-                <img src="https://picsum.photos/400/300?2">
-                <div class="overlay">
-                    <h5>City Life</h5>
-                    <p>Urban</p>
+        <div class="row">
+            <!-- Item 1 -->
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-5">
+                <div class="gallery-card">
+                    <div class="img-container">
+                        <img src="https://picsum.photos/id/1/400/250" alt="Clocks">
+                        <div class="img-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="card-footer-info">
+                        <span class="date">18 Oct 2020</span>
+                        <span class="views">9,906 views</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-5">
+                <div class="gallery-card">
+                    <div class="img-container">
+                        <img src="https://picsum.photos/id/20/400/250" alt="Plants">
+                        <div class="img-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="card-footer-info">
+                        <span class="date">14 Oct 2020</span>
+                        <span class="views">16,100 views</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-5">
+                <div class="gallery-card">
+                    <div class="img-container">
+                        <img src="https://picsum.photos/id/15/400/250" alt="Forest">
+                        <div class="img-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="card-footer-info">
+                        <span class="date">12 Oct 2020</span>
+                        <span class="views">12,460 views</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-5">
+                <div class="gallery-card">
+                    <div class="img-container">
+                        <img src="https://picsum.photos/id/30/400/250" alt="Headphones">
+                        <div class="img-overlay">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                    <div class="card-footer-info">
+                        <span class="date">10 Oct 2020</span>
+                        <span class="views">11,402 views</span>
+                    </div>
                 </div>
             </div>
         </div>
+    </main>
 
-        <div class="col-md-6 col-lg-3">
-            <div class="gallery-item">
-                <img src="https://picsum.photos/400/300?3">
-                <div class="overlay">
-                    <h5>Dog</h5>
-                    <p>Animals</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-            <div class="gallery-item">
-                <img src="https://picsum.photos/400/300?4">
-                <div class="overlay">
-                    <h5>Beach</h5>
-                    <p>Travel</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- PAGINACIÓN -->
-    <div class="d-flex justify-content-center mt-5">
-        <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
-            <li class="page-item active"><a class="page-link">1</a></li>
-            <li class="page-item"><a class="page-link">2</a></li>
-            <li class="page-item"><a class="page-link">3</a></li>
-            <li class="page-item"><a class="page-link">Next</a></li>
-        </ul>
-    </div>
-
-</div>
-
-<!-- FOOTER -->
-<footer class="footer mt-5">
-    <div class="container text-center">
-        <p>© 2026 Catalog-Z Clone | Diseñado por ti </p>
-    </div>
-</footer>
-
-<!-- JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer -->
+    <footer class="footer-bg py-4 text-center">
+        <p class="text-muted mb-0">Copyright 2026 KRSS</p>
+    </footer>
 
 </body>
 </html>
