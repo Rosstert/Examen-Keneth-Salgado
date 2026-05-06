@@ -1,4 +1,3 @@
-/* VARIABLES */
 :root {
     --primary: #000000;
     --text-gray: #ffffff;
@@ -10,7 +9,6 @@ body {
     color: #f7f7f7;
 }
 
-/* NAVBAR */
 .navbar {
     padding: 25px 0;
     background: #fff6f6;
@@ -39,7 +37,6 @@ body {
     border-bottom: 3px solid var(--primary);
 }
 
-/* HERO SECTION */
 .hero-section {
     height: 300px;
     background: #aaefff; 
@@ -75,7 +72,6 @@ body {
     background-color: #007a7a;
 }
 
-/* GALERÍA */
 .tm-text-primary {
     color: var(--primary);
     font-weight: 500;
@@ -94,7 +90,6 @@ body {
     padding: 2px;
 }
 
-/* CARDS */
 .gallery-card {
     background: transparent;
 }
@@ -147,7 +142,6 @@ body {
     color: var(--text-gray);
 }
 
-/* FOOTER */
 .footer-bg {
     background-color: #edff61;
     border-top: 1px solid #000000;
